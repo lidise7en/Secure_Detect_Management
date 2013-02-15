@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="test" namespace="/" extends="struts-default">
+
+
+	<!-- 安全检测项管理的Action -->
+	<action name="listItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="list">
+		<result name="list">pages/securityDetectItem/itemList.jsp</result>
+	</action>
+	<action name="listItemByTypeAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="listByType">
+		<result name="list">pages/securityDetectItem/itemList.jsp</result>
+	</action>	
+	<action name="deleteItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="delete">
+		<result name="list">pages/securityDetectItem/itemList.jsp</result>
+	</action>
+	<action name="initAddItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="initAdd">
+		<result name="add">pages/securityDetectItem/addItem.jsp</result>
+	</action>
+	<action name="addItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="add">
+		<result name="add">pages/securityDetectItem/addItem2.jsp</result>
+		<result name="selectTools">pages/securityDetectItem/addItem3.jsp</result>
+<!-- 	 	<result name="list" type="redirect">listItemAction</result>   -->
+	<!--	<result name="list">pages/securityDetectItem/itemList.jsp</result>-->
+	</action>
+	
+	<action name="selectToolsAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="selectTools">
+		<result name="list" type="redirect">listItemAction</result>
+	</action>
+	
+	<action name="updateItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="update">
+		<result name="list" type="redirect">listItemAction</result>
+	</action>
+	<action name="initUpdateItemAction" class="service.securityDetectItemManage.action.SecurityDetectItemAction" method="initUpdate">
+		<result name="update">pages/securityDetectItem/updateItem.jsp</result>
+	</action>
+	
+	<!-- 安全检测业务管理的Action -->
+	<action name="listServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="list">
+		<result name="list">pages/securityDetectItem/serviceList.jsp</result>
+	</action>
+	<action name="initAddServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="initAddService">
+		<result name="add">pages/securityDetectItem/addService.jsp</result>
+	</action>
+	<action name="addServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="add">
+		<result name="add">pages/securityDetectItem/addService2.jsp</result>
+	    <result name="list" type="redirect">listServiceAction</result>
+	</action>
+	<action name="deleteServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="delete">
+		<result name="list">pages/securityDetectItem/serviceList.jsp</result>
+	</action>
+	<action name="updateServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="update">
+		<result name="input">pages/securityDetectItem/updateService.jsp</result>
+		<result name="list" type="redirect">listServiceAction</result>
+	</action>
+	<action name="initUpdateServiceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="initUpdate">
+		<result name="update">pages/securityDetectItem/updateService.jsp</result>
+	</action>
+	
+	<!-- 接口的测试 -->
+	<action name="testInterfaceAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="testInterface">
+	</action>
+	<action name="showItemsAction" class="service.securityDetectItemManage.action.SecurityDetectServiceAction" method="showItems">
+		<result name="test">pages/securityDetectItem/testInterface2.jsp</result>
+	</action>
+	
+	
+	<!-- 查询action -->
+	<action name="itemListQueryAction" class="service.securityDetectItemManage.action.SecurityDetectItemQueryAction" method="itemList">
+		<result name="itemList">pages/securityDetectItem/queryItemList.jsp</result>
+	</action>
+	<action name="serviceListQueryAction" class="service.securityDetectItemManage.action.SecurityDetectItemQueryAction" method="serviceList">
+		<result name="serviceList">pages/securityDetectItem/queryServiceList.jsp</result>
+	</action>
+	<action name="itemInfoAction" class="service.securityDetectItemManage.action.SecurityDetectItemQueryAction" method="getItemInfo">
+		<result name="itemInfo">pages/securityDetectItem/itemInfo.jsp</result>
+	</action>
+	<action name="serviceInfoAction" class="service.securityDetectItemManage.action.SecurityDetectItemQueryAction" method="getServiceInfo">
+		<result name="serviceInfo">pages/securityDetectItem/serviceInfo.jsp</result>
+	</action>
+	
+	
+</package>
+
+</struts>    

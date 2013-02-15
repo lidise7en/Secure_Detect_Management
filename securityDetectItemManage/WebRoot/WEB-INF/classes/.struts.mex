@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="test" location="12,8" size="226,1922">
+    <action name="listItemAction" location="40,132" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="itemList.jsp" />
+      </result>
+    </action>
+    <action name="listItemByTypeAction" location="40,198" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="itemList.jsp" />
+      </result>
+    </action>
+    <action name="deleteItemAction" location="44,272" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="itemList.jsp" />
+      </result>
+    </action>
+    <action name="initAddItemAction" location="48,336" size="150,41">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="addItem.jsp" />
+      </result>
+    </action>
+    <action name="addItemAction" location="49,416" size="150,62">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="addItem2.jsp" />
+      </result>
+      <result name="list" />
+    </action>
+    <action name="updateItemAction" location="48,498" size="150,41">
+      <result name="list" />
+    </action>
+    <action name="initUpdateItemAction" location="50,559" size="150,41">
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="updateItem.jsp" />
+      </result>
+    </action>
+    <action name="listServiceAction" location="46,826" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="serviceList.jsp" />
+      </result>
+    </action>
+    <action name="initAddServiceAction" location="46,971" size="150,41">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="addService.jsp" />
+      </result>
+    </action>
+    <action name="addServiceAction" location="50,1046" size="150,62">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="addService2.jsp" />
+      </result>
+      <result name="list" />
+    </action>
+    <action name="deleteServiceAction" location="44,896" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="serviceList.jsp" />
+      </result>
+    </action>
+    <action name="updateServiceAction" location="55,1130" size="150,62">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="updateService.jsp" />
+      </result>
+      <result name="list" />
+    </action>
+    <action name="initUpdateServiceAction" location="56,1215" size="150,41">
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="updateService.jsp" />
+      </result>
+    </action>
+    <action name="testInterfaceAction" location="38,1306" size="150,40" />
+    <action name="showItemsAction" location="38,1387" size="150,41">
+      <result name="test">
+        <resourceEdge source="test" routing="0" target="testInterface2.jsp" />
+      </result>
+    </action>
+    <action name="itemListQueryAction" location="41,1535" size="150,41">
+      <result name="itemList">
+        <resourceEdge source="itemList" routing="0" target="queryItemList.jsp" />
+      </result>
+    </action>
+    <action name="serviceListQueryAction" location="37,1605" size="150,41">
+      <result name="serviceList">
+        <resourceEdge source="serviceList" routing="0" target="queryServiceList.jsp" />
+      </result>
+    </action>
+    <action name="itemInfoAction" location="38,1687" size="150,41">
+      <result name="itemInfo">
+        <resourceEdge source="itemInfo" routing="0" target="itemInfo.jsp" />
+      </result>
+    </action>
+    <action name="serviceInfoAction" location="39,1742" size="150,41">
+      <result name="serviceInfo">
+        <resourceEdge source="serviceInfo" routing="0" target="serviceInfo.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="itemList.jsp" path="pages/securityDetectItem/itemList.jsp" location="436,220" size="150,55" />
+  <webResource name="addItem.jsp" path="pages/securityDetectItem/addItem.jsp" location="439,357" size="150,55" />
+  <webResource name="addItem2.jsp" path="pages/securityDetectItem/addItem2.jsp" location="436,435" size="150,55" />
+  <webResource name="updateItem.jsp" path="pages/securityDetectItem/updateItem.jsp" location="404,568" size="150,55" />
+  <webResource name="serviceList.jsp" path="pages/securityDetectItem/serviceList.jsp" location="364,889" size="150,55" />
+  <webResource name="addService.jsp" path="pages/securityDetectItem/addService.jsp" location="365,982" size="150,55" />
+  <webResource name="addService2.jsp" path="pages/securityDetectItem/addService2.jsp" location="369,1063" size="150,55" />
+  <webResource name="updateService.jsp" path="pages/securityDetectItem/updateService.jsp" location="357,1146" size="150,55" />
+  <webResource name="testInterface2.jsp" path="pages/securityDetectItem/testInterface2.jsp" location="358,1401" size="150,55" />
+  <webResource name="queryItemList.jsp" path="pages/securityDetectItem/queryItemList.jsp" location="352,1544" size="150,55" />
+  <webResource name="queryServiceList.jsp" path="pages/securityDetectItem/queryServiceList.jsp" location="346,1616" size="150,55" />
+  <webResource name="itemInfo.jsp" path="pages/securityDetectItem/itemInfo.jsp" location="345,1688" size="150,55" />
+  <webResource name="serviceInfo.jsp" path="pages/securityDetectItem/serviceInfo.jsp" location="346,1755" size="150,55" />
+</Struts2Diagram>
+

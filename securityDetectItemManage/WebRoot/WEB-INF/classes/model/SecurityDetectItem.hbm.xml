@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="model.SecurityDetectItem" table="SECURITYDETECTITEM">
+  <id column="SecurityDetectItem_ID" name="id" >
+   <generator class="native"/>
+  </id>
+  
+  <property column="ITEMNAME" name="itemName" type="string"/>
+   <property column="DESCRIPTION"  name="description" type="string"/>  
+   <property column="TYPE"  name="type" type="string"/>
+   <property column="CREATETIME"  name="createTime" type="date"/> 
+   <property column="ITEMINFO"  name="itemInfo" type="string"/>
+   <property column="Tools"  name="suggestionTools" type="string"/>
+ <set name="SecurityDetectServices" table="SECURITYDETECTSERVICE_SECURITYDETECTITEM" >  
+<key column="SecurityDetectItem_ID" > </key> 
+<many-to-many class="model.SecurityDetectService" column="SecurityDetectService_ID" />
+</set> 
+  
+ </class>
+</hibernate-mapping>

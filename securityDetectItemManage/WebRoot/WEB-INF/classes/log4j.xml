@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+    <appender name="debugFile" class="org.apache.log4j.FileAppender">
+	    <param name="File" value="debug3.log"/>
+		<param name="Append" value="true"/>
+	    <layout class="org.apache.log4j.PatternLayout">
+		    <param name="ConversionPattern" value="%d{ABSOLUTE} %p [%c] - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		    <param name="LevelMin" value="debug"/>
+			<param name="LevelMax" value="debug"/>
+		</filter>
+	</appender>
+
+	<appender name="logFile" class="org.apache.log4j.FileAppender">
+	    <param name="File" value="share3.log"/>
+		<param name="Append" value="true"/>
+	    <layout class="org.apache.log4j.PatternLayout">
+		    <param name="ConversionPattern" value="%d{ABSOLUTE} %p [%c] - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="warnFile" class="org.apache.log4j.FileAppender">
+	    <param name="File" value="warn3.log"/>
+		<param name="Append" value="true"/>
+	    <layout class="org.apache.log4j.PatternLayout">
+		    <param name="ConversionPattern" value="%d{ABSOLUTE} %p [%c] - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		    <param name="LevelMin" value="warn"/>
+			<param name="LevelMax" value="warn"/>
+		</filter>
+	</appender>
+	
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+	    <layout class="org.apache.log4j.PatternLayout">
+		    <param name="ConversionPattern" value="%d{ABSOLUTE}  %p [%c] - %m%n"/>
+		</layout>
+	</appender>
+
+	<root>
+	    <priority value="debug"/>
+		<appender-ref ref="stdout"/>
+		<appender-ref ref="debugFile"/>
+		<appender-ref ref="logFile"/>
+		<appender-ref ref="warnFile"/>
+	</root>
+</log4j:configuration>
